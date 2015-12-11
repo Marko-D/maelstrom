@@ -21,16 +21,10 @@
     getAllUsers();
 
     model.getUser = function (id) {
-      console.log($state);
-      
       UserService.getUser(id).success(function (response) {
         model.selectedUser = response;
       });
     };
-
-    if($stateParams.id) {
-      model.getUser($stateParams.id);
-    }
 
     model.create = function () {
       UserService.create(model.user).success(function(response){
