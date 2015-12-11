@@ -1,0 +1,9 @@
+.exo-sidebar {	
+	background: color(base);
+	overflow: auto;
+	&-item {
+		border-bottom: 1px solid darker(base);
+		text-align: center;
+		padding: 20px;
+	}
+}

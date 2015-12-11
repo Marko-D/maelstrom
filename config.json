@@ -1,0 +1,7 @@
+{
+	"prefix": "sr",
+	"appPath": "./app",
+	"assets": "./app/assets",
+	"dist": "./dist",
+	"temp": "./.tmp"
+}

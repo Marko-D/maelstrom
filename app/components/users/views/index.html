@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-md-4">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in UserCtrl.users" ng-click="UserCtrl.getUser(user.id)">
+					<td>{{user.firstName}} {{user.lastName}}</td>
+					<td>{{user.phone}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<form class="col-md-4" name="create" ng-submit="UserCtrl.create()">
+		<input class="form-control" type="text" placeholder="First Name" ng-model="UserCtrl.user.firstName">
+		<input class="form-control" type="text" placeholder="Last Name" ng-model="UserCtrl.user.lastName">
+		<input class="form-control" type="text" placeholder="Phone Number" ng-model="UserCtrl.user.phone">
+		<input class="btn btn-success" type="submit" value="Create">
+	</form>
+	<form ng-if="UserCtrl.selectedUser" class="col-md-4" name="edit" ng-submit="UserCtrl.edit()">
+		<input class="form-control" type="text" placeholder="First Name" ng-model="UserCtrl.selectedUser.firstName">
+		<input class="form-control" type="text" placeholder="Last Name" ng-model="UserCtrl.selectedUser.lastName">
+		<input class="form-control" type="text" placeholder="Phone Number" ng-model="UserCtrl.selectedUser.phone">
+		<input class="btn btn-primary" type="submit" value="Edit">
+	</form>
+</div>
+
+
+<!--.row>.col-md-4>table.table.table-striped>thead>tr>th{Name}+th{Phone}^^tbody>tr[ng-repeat="user in UserCtrl.users"]>td{{{user.firstName}} {{user.lastName}}}+td{{{user.phone}}}-->
+
+<!--form.col-md-4[ng-submit="UserCtrl.create()"]>input.form-control[placeholder="Placeholder"][ng-model="UserCtrl.user.prop"]*3+input:submit.btn-btn-primary[value="Save"]-->

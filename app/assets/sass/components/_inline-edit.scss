@@ -1,0 +1,10 @@
+.exo-inline-edit {
+	border: none;
+	border-bottom: 1px dashed darker(base);
+	background: transparent;
+
+	&:focus {
+		outline: none;
+		border-bottom: 1px dotted color(positive);
+	}
+}

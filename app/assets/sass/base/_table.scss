@@ -1,0 +1,85 @@
+.exo-table {
+	@extend .table;
+	@extend .table-hover;
+	@extend .table-striped;
+	margin-bottom: 0;
+
+	&-cards {
+		@include respond-to(mobile) {
+
+			> thead {
+				display: none;
+			}
+			
+			> tbody {
+				> tr {
+					display: block;
+					border: 1px solid darker(base);
+					border-radius: 3px;
+					margin: 0 0 15px;
+					&:last-child {
+						margin: 0;
+					}
+					> td {
+						display: block;
+						border-top: none;
+						font-weight: bold;
+						&[data-exo-header]:before {
+							content: attr(data-exo-header);
+							font-weight: normal;
+							text-align: right;
+							font-size: 12px;
+							width: 110px;
+							padding: 0 10px 0 0;
+							display: inline-block;
+						}
+					}
+				}
+			}
+
+			@include respond-to(micro) {
+				> tbody {
+					> tr {
+						> td {
+							&[data-exo-header]:before {
+								display: block;
+								width: auto;
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-form {
+		@include respond-to(mobile) {
+			> tbody {
+				> tr {
+					display: block;
+					border: 1px solid darker(base);
+					margin: 0 0 10px;
+					&:last-child {
+						margin: 0;
+					}
+					> td {
+						width: 100%;
+						display: block;
+						padding: 5px;
+						border-top: none;
+					}
+					> td:first-child {
+						display: block;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.exo-zero-results {
+	color: lighter(primary);
+	font-weight: bold;
+}

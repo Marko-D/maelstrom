@@ -1,0 +1,111 @@
+.exo-nav {
+	&-list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	&-item {
+	}
+	&-link {
+		display: block;
+		padding: 15px 20px;
+		text-transform: uppercase;
+		border-bottom: 1px solid darker(base);
+		background: color(secondary);
+		font-weight: bold;
+		transition: .2s box-shadow ease-in;
+
+		&:hover, &:focus {
+			text-decoration: none;
+			box-shadow: 5px 0 0 0 color(special) inset;
+		
+
+}		&.is-active {
+			background: color(base);
+			box-shadow: 5px 0 0 0 color(special) inset;
+		}
+	}
+}
+
+.exo-menu-trigger {
+	display: block;
+	background: color(secondary);
+	border-left: 1px solid darker(base);
+	border-right: 1px solid darker(base);	
+	height: 100%;
+	width: $header-height;
+	float: left;
+	position: relative;
+	cursor: pointer;
+
+	$width: 12px;
+	$height: 2px;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: $width;
+		display: block;
+		box-sizing: content-box;
+		margin-top: -($height * 3);
+	}
+
+	&:before {
+		height: #{$height};
+		border-top: #{$height} solid color(primary);
+		border-bottom: #{$height} solid color(primary);
+	}
+
+	&:after {
+		border-bottom: #{$height} solid color(primary);
+		margin-top: $height;
+	}
+
+	.exo-theme-alt:not(.exo-sidebar-open) & {
+		position: absolute;
+		border: none;
+		left: 0;
+		background: transparent;
+		&:before,
+		&:after {
+			border-color: color(base);
+		}
+	}
+	.exo-theme-alt & {
+		position: absolute;
+		left: $sidebar-width-alt;
+		transition: .3s all ease-in;
+	}
+
+//	.exo-sidebar-open & {
+//		&:before,
+//		&:after {
+//			width: 15px;
+//		}
+
+//		&:before {
+//			border-bottom: none;
+//			transform: rotate(45deg);
+//			margin: -3px 0 0 -9px;
+//		}
+
+//		&:after {
+//			transform: rotate(-45deg);
+//			margin: -3px 0 0 -8px;
+//		}
+//	}
+}
+
+.exo-menu-logout {
+	background: image('exo-bg-logout.png')no-repeat scroll center center transparent;
+	float: right;
+	padding: 20px 0;
+	height: $header-height;
+	width: 60px;
+	cursor: pointer;
+
+}

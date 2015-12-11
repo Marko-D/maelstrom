@@ -1,0 +1,82 @@
+$color-brand: #202124;
+$color-base: #fff;
+$color-primary: #444;
+$color-secondary: #f7f9fa;
+
+$color-text: $color-primary;
+$color-link: $color-primary;
+
+$color-positive: #4fc1e9;
+$color-negative: #FF6464;
+$color-neutral:  #F5F7FA;
+$color-warning: #ffb300;
+$color-info: #8cc152;
+$color-special: #d00000;
+
+
+$colors:(
+	brand: $color-brand,
+	base: $color-base,
+	primary: $color-primary,
+	secondary: $color-secondary,
+	text: $color-text,
+	link: $color-link,
+	positive: $color-positive,
+	negative: $color-negative,
+	neutral: $color-neutral,
+	warning: $color-warning,
+	info: $color-info,
+	special: $color-special
+);
+
+$colors-text:(
+	brand: #fff,
+	base: #555555,
+	primary: #666,
+	secondary: #bbb,
+	text: #909090,
+	link: #08c,
+	positive: #fff,
+	negative: #fff,
+	neutral: #aab2bd,
+	warning: #fff,
+	info: #aab2bd,
+	special: #fff
+);
+
+@function color($c) {
+	@return map-get($colors, $c);
+}
+
+@function color-text($c) {
+	@return map-get($colors-text, $c);
+}
+
+$color-brightness: 10%;
+
+@function darker($c) {
+	@return darken(color($c), $color-brightness);
+}
+
+@function lighter($c) {
+	@return lighten(color($c), $color-brightness);
+}
+
+// Bootstrap colors
+
+// Global text color on <body>
+$text-color: color(primary);      
+
+// Global light text color on <body>
+$text-light-color: #ffffff;
+
+// Global muted text color on <body>
+$text-muted-color: #444444;
+
+// Global textual link color.
+$link-color: color(link);
+
+// Link hover color.
+$link-hover-color: darken($link-color, 15%);
+
+$primary-link-color: #65A0D0;

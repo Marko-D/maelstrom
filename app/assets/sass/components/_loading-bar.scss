@@ -1,0 +1,14 @@
+#loading-bar .bar {
+    background: color(special);
+}
+
+#loading-bar .peg {
+    -moz-box-shadow: color(special) 1px 0 6px 1px;
+    -ms-box-shadow: color(special) 1px 0 6px 1px;
+    -webkit-box-shadow: color(special) 1px 0 6px 1px;
+    box-shadow: color(special) 1px 0 6px 1px;
+}
+#loading-bar-spinner .spinner-icon {
+    border-top-color: color(base);
+    border-left-color: color(base);
+}

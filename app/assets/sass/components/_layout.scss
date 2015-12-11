@@ -1,0 +1,98 @@
+html, body {
+	height: 100%;
+}
+
+body {
+}
+
+%exo-layout-fixed {
+	position: fixed;
+	z-index: 1;
+	transform: translateZ(0);
+}
+
+.exo-sidebar {
+	@extend %exo-layout-fixed;
+	
+	top: $header-height;
+	bottom: 0;
+	overflow: auto;
+	transition: .3s transform ease-in;
+	
+	width: $sidebar-width;
+	transform: translateX(-#{$sidebar-width}) translateZ(0);
+
+	.exo-theme-alt & {
+		width: $sidebar-width-alt;
+		transform: translateX(-#{$sidebar-width-alt}) translateZ(0);
+	}
+
+	&-open & {
+		transform: translateX(0) translateZ(0);
+		@include respond-to(mobile) {
+			box-shadow: 0 0 40px 0 rgba(color(brand), 0.2);
+		}
+	}
+
+}
+.exo-header {
+	@extend %exo-layout-fixed;
+
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: color(base);
+	height: $header-height;
+	margin-bottom: 30px;
+	border-bottom: 1px solid darker(base);
+}
+
+.exo-main {
+	padding-top: $header-height + $heading-push;
+	padding-bottom: $heading-push;
+	float: right;
+	width: 100%;
+	transition: .3s width ease-in;
+	-webkit-overflow-scrolling: touch;
+	
+	.exo-sidebar-open & {
+		width: calc(100% - #{$sidebar-width});
+	}
+	@include respond-to(mobile) {
+		&,
+		.exo-sidebar-open & {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
+
+	.exo-theme-alt.exo-sidebar-open & {
+		width: calc(100% - #{$sidebar-width-alt});
+
+		@include respond-to(mobile) {
+			width: 100%;
+		}
+	}
+
+}
+
+.exo-content {
+	padding: 0 40px;
+	@include respond-to(mobile) {
+		padding: 0 20px;
+	}
+}
+
+.exo-col {
+	@include columns(2, $container-width: 100%, $margin: 10px, $target: div, $order: (2,1));
+
+	> div {
+		border: 1px solid #26c;
+	}
+}
+
+.sr-content {
+	//background: color(base);
+}

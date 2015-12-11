@@ -1,0 +1,26 @@
+.exo-sort {
+	display: block;
+	cursor: pointer;
+	&:after {
+		content: "";
+		display: block;
+		width: 5px;
+		height: 9px;
+		margin: 5px 0 0 0;
+		float: right;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAL0lEQVQIW2NkgIJr167919LSYgRxwQRIACYJkmBEFoBJgFWiAxIEcZqJYTs2dwIAytgXDPuuR7IAAAAASUVORK5CYII=');
+	}
+
+	.exo-sortorder {
+		float: right;
+		width: 5px;
+		height: 9px;
+		margin: 5px 0 0 -5px;
+		position: relative;
+		z-index: 1;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAPUlEQVQIW2NkgIJr167919LSYgRxwQRIACYJkmBEFoBJgFWiAxIE/f394ZagmIkssXHjRka4mSAJkABINQBRBxV3vs8MogAAAABJRU5ErkJggg==');
+		&.reverse {
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAPUlEQVQIW2NkgAJ/f///GzduZARxwQRIACYJkmBEFoBJgFWiAxIEr127BrcExUxkCS0tLUa4mSAJkABINQDMFBV3wIZTqAAAAABJRU5ErkJggg==');
+		}
+	}
+}

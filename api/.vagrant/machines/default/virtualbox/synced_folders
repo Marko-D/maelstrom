@@ -1,0 +1,1 @@
+{"virtualbox":{"vagrant-root":{"id":"vagrant-root","create":true,"group":"www-data","owner":"www-data","guestpath":"/mantra","hostpath":"C:/Projects/maelstrom/api","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Projects/maelstrom/api","disabled":false}}}

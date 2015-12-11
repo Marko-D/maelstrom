@@ -1,0 +1,21 @@
+.exo-panel {
+	background: color(base);
+	border: 1px solid darker(base);
+	border-radius: 3px;
+	margin-bottom: $heading-push;
+	padding: 20px;
+
+	@include respond-to(mobile) {
+		padding: 10px;
+	}
+
+	&-base {
+		padding: 0;
+	}
+	&-clean {
+		padding: 20px;
+	}
+}
+.exo-section {
+	margin-bottom: $heading-push;
+}

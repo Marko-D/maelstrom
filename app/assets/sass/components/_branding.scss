@@ -1,0 +1,35 @@
+.exo-brand {
+	background: color(brand);
+	color: color(base);
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 8px 0 7px;
+	width: $sidebar-width;
+	height: $header-height;
+	float: left;
+
+	.exo-theme-alt & {
+		width: $sidebar-width-alt;
+	}
+
+	&:hover, &:focus {
+		color: color(base);
+		text-decoration: none;
+	}
+}
+
+.exo-logo {
+	display: block;
+	margin: auto;
+	max-width: 75px;
+}
+
+.exo-logo-sub {
+	display: block;
+	font-size: 11px;
+}
+
+.exo-logo-print {
+	display: none;
+}

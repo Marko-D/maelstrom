@@ -1,0 +1,22 @@
+.exo-logo {
+	display: none;
+}
+.exo-logo-print {
+	display: inline-block;
+}
+.exo-main {
+	min-width: inherit !important;
+}
+.chart {
+	min-width: inherit !important;
+}
+.exo-sidebar,
+.exo-menu-trigger {
+	display: none;
+}
+.exo-sidebar-open {
+	.exo-main,
+	.exo-header {
+		min-width: 100% !important;
+	}
+}

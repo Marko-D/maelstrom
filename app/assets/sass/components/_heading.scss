@@ -1,0 +1,18 @@
+.exo-heading {
+	&-page {
+		margin: 0 0 $heading-push;
+		text-align: center;
+	}
+	&-section {
+		margin: 0 0 $heading-push - 10;
+	}
+	&-panel {
+		margin: 0 0 $heading-push - 25;
+		font-weight: bold;
+	}
+	&-primary {
+		border-bottom: 3px solid color(special);
+		display: inline-block;
+		padding: ($heading-push - 25) 0;
+	}
+}
